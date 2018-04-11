@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Order Page</title>
+    <meta name="description" content="Order Page">
+    <meta name="twitter:card" content="summary">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/icons.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/css.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="js/js.js"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-110151893-1');
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <header>
+                <div class="header__top">
+                    <div class="container">
+                        <div class="row flex-row">
+                            <div class="col-md-3 col-sm-3">
+                                <a href="https://carlined.com/" class="logo">
+                        <img class="img-responsive" src="img/carlined-logo.svg" alt="Carlined Site">
+                    </a>
+                            </div>
+                            <div class="col-md-7 col-sm-6 formWrap">
+                                <form id="searchform" class="searchform" action="/search-results">
+                                    <input name="q" placeholder="Search" required="" type="search">
+                                    <button type="submit"><i class="icon-search"></i></button>
+                                </form>
+                            </div>
+                            <div class="col-md-2 col-sm-3 hoursWrap">
+                                <div class="opened__hours">
+                                    <div class="opened__hours-content">
+                                        Mon - Sun
+                                        <br> 8AM - 10PM
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Main navigation-->
+                <div class="main-navigation-wrap">
+                    <nav class="navbar navbar-default">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="menu nav navbar-nav main-menu">
+                                <li>
+                                    <a href="https://carlined.com/interior-accessories">INTERIOR</a>
+                                </li>
+                                <li>
+                                    <a href="https://carlined.com/exterior-accessories">EXTERIOR</a>
+                                </li>
+                                <li>
+                                    <a href="https://carlined.com/t-rex-parts">MANUFACTURERS</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            <div id="page-header-area" class="page-header-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="page-header product-page-header">
+                                <h1 class="page-title">Order Page</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-wrap page-main">
+                <div class="contact-form-area contact-form">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <!-- <form id="form-order" class="basicfields cart-form"> -->
+                                <form id="form-order" onsubmit="submitFormOrder();return false;" class="basicfields cart-form">
+                                    <p class="bg-warning js-form-info" id="form-order-warning">Please fill in the form fields "Name" & "Email"</p>
+                                    <!-- <p class="bg-warning js-form-info" id="form-order-warning"></p> -->
+                                    <p class="bg-success js-form-info" id="form-order-success">Thank you! We will contact you via Email</p>
+                                    <!-- <p class="bg-success js-form-info" id="form-order-success"></p> -->
+                                    <div class="form-group cart__list">
+                                        <table id="cart_table" class="" cellspacing="1">
+                                            <!-- <thead> -->
+                                            <caption>Choosed items</caption>
+                                            <tr>
+                                                <th class="cart__list-thumbnail hidden-xs">Item photo</th>
+                                                <th class="cart__list-name">Item title</th>
+                                                <th class="cart__list-quantity">Quantity</th>
+                                                <th class="cart__list-price">Price</th>
+                                                <th class="cart__list-remove">Remove</th>
+                                            </tr>
+                                            <!-- </thead> -->
+                                            <tbody>
+                                                <tr class="cart__item">
+                                                    <td class="cart__item-thumbnail hidden-xs">
+                                                        <a href="https://carlined.com/grilles-t-rex-grilles-upc-609579011228"><img class="img-responsive" src="img/c_500x426_grilles-t-rex-grilles-part-21639-upc609579011228.jpg" alt="Grilles T-Rex Grilles 21639 609579011228" width="120" height="70"></a>
+                                                        <br>
+                                                    </td>
+                                                    <td class="cart__item-name" data-title="Product">
+                                                        <a href="https://carlined.com/grilles-t-rex-grilles-upc-609579011228">Grilles T-Rex Grilles 21639 609579011228</a>
+                                                    </td>
+                                                    <td class="cart__item-count" data-title="Price">
+                                                        <div class="checkout-input -small-control">
+                                                            <div class="field_with_placeholder -not-empty -not-focus">
+                                                                <div class="select-arrow-hide">
+                                                                    <select class="js-cart-prod-select-qty">
+                                                                        <option selected="" value="1">1</option>
+                                                                        <option value="2">2</option>
+                                                                        <option value="3">3</option>
+                                                                        <option value="4">4</option>
+                                                                        <option value="5">5</option>
+                                                                        <option value="6">6</option>
+                                                                        <option value="7">7</option>
+                                                                        <option value="8">8</option>
+                                                                        <option value="9">9</option>
+                                                                        <option value="10">10</option>
+                                                                        <option value="11">11</option>
+                                                                        <option value="12">12</option>
+                                                                        <option value="13">13</option>
+                                                                        <option value="14">14</option>
+                                                                        <option value="15">15</option>
+                                                                        <option value="16">16</option>
+                                                                        <option value="17">17</option>
+                                                                        <option value="18">18</option>
+                                                                        <option value="19">19</option>
+                                                                        <option value="20">20</option>
+                                                                        <option value="21">21</option>
+                                                                        <option value="22">22</option>
+                                                                        <option value="23">23</option>
+                                                                        <option value="24">24</option>
+                                                                        <option value="25">25</option>
+                                                                        <option value="26">26</option>
+                                                                        <option value="27">27</option>
+                                                                        <option value="28">28</option>
+                                                                        <option value="29">29</option>
+                                                                        <option value="30">30</option>
+                                                                        <option value="31">31</option>
+                                                                        <option value="32">32</option>
+                                                                        <option value="33">33</option>
+                                                                        <option value="34">34</option>
+                                                                        <option value="35">35</option>
+                                                                        <option value="36">36</option>
+                                                                        <option value="37">37</option>
+                                                                        <option value="38">38</option>
+                                                                        <option value="39">39</option>
+                                                                        <option value="40">40</option>
+                                                                        <option value="41">41</option>
+                                                                        <option value="42">42</option>
+                                                                        <option value="43">43</option>
+                                                                        <option value="44">44</option>
+                                                                        <option value="45">45</option>
+                                                                        <option value="46">46</option>
+                                                                        <option value="47">47</option>
+                                                                        <option value="48">48</option>
+                                                                        <option value="49">49</option>
+                                                                        <option value="50">50</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="cart__item-subtotal" data-title="Total">
+                                                        $ <span class="coast" id="coast">1040</span>
+                                                    </td>
+                                                    <td class="cart__item-remove">
+                                                        <a href="#" class="remove" title="Delete This Item" data-product_id="3399" data-product_sku="">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="cart__item">
+                                                    <td class="cart__item-thumbnail hidden-xs">
+                                                        <a href="https://carlined.com/grilles-t-rex-grilles-upc-609579011228"><img class="img-responsive" src="img/c_500x426_grilles-t-rex-grilles-part-21639-upc609579011228.jpg" alt="Grilles T-Rex Grilles 21639 609579011228" width="120" height="70"></a>
+                                                        <br>
+                                                    </td>
+                                                    <td class="cart__item-name" data-title="Product">
+                                                        <a href="https://carlined.com/grilles-t-rex-grilles-upc-609579011228">Grilles T-Rex Grilles 21639 609579011228</a>
+                                                    </td>
+                                                    <td class="cart__item-count" data-title="Price">
+                                                        <div class="checkout-input -small-control">
+                                                            <div class="field_with_placeholder -not-empty -not-focus">
+                                                                <div class="select-arrow-hide">
+                                                                    <select class="js-cart-prod-select-qty">
+                                                                        <option selected="" value="1">1</option>
+                                                                        <option value="2">2</option>
+                                                                        <option value="3">3</option>
+                                                                        <option value="4">4</option>
+                                                                        <option value="5">5</option>
+                                                                        <option value="6">6</option>
+                                                                        <option value="7">7</option>
+                                                                        <option value="8">8</option>
+                                                                        <option value="9">9</option>
+                                                                        <option value="10">10</option>
+                                                                        <option value="11">11</option>
+                                                                        <option value="12">12</option>
+                                                                        <option value="13">13</option>
+                                                                        <option value="14">14</option>
+                                                                        <option value="15">15</option>
+                                                                        <option value="16">16</option>
+                                                                        <option value="17">17</option>
+                                                                        <option value="18">18</option>
+                                                                        <option value="19">19</option>
+                                                                        <option value="20">20</option>
+                                                                        <option value="21">21</option>
+                                                                        <option value="22">22</option>
+                                                                        <option value="23">23</option>
+                                                                        <option value="24">24</option>
+                                                                        <option value="25">25</option>
+                                                                        <option value="26">26</option>
+                                                                        <option value="27">27</option>
+                                                                        <option value="28">28</option>
+                                                                        <option value="29">29</option>
+                                                                        <option value="30">30</option>
+                                                                        <option value="31">31</option>
+                                                                        <option value="32">32</option>
+                                                                        <option value="33">33</option>
+                                                                        <option value="34">34</option>
+                                                                        <option value="35">35</option>
+                                                                        <option value="36">36</option>
+                                                                        <option value="37">37</option>
+                                                                        <option value="38">38</option>
+                                                                        <option value="39">39</option>
+                                                                        <option value="40">40</option>
+                                                                        <option value="41">41</option>
+                                                                        <option value="42">42</option>
+                                                                        <option value="43">43</option>
+                                                                        <option value="44">44</option>
+                                                                        <option value="45">45</option>
+                                                                        <option value="46">46</option>
+                                                                        <option value="47">47</option>
+                                                                        <option value="48">48</option>
+                                                                        <option value="49">49</option>
+                                                                        <option value="50">50</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="cart__item-subtotal" data-title="Total">
+                                                        $ <span class="coast" id="coast">1040</span>
+                                                    </td>
+                                                    <td class="cart__item-remove">
+                                                        <a href="#" class="remove" title="Delete This Item" data-product_id="3399" data-product_sku="">×</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="hidden-xs">Here is required fields ></td>
+                                                    <td>
+                                                        <div class="input-fields col-sm-6">
+                                                            <input name="Order[name]" type="text" id="order-name" placeholder="Your Name *" required="">
+                                                            <label class="form-error form-name" id="error-order-name"></label>
+                                                        </div>
+                                                        <div class="input-fields col-sm-6">
+                                                            <input name="Order[email]" type="email" id="order-email" placeholder="Email address *" required="">
+                                                            <label class="form-error form-name" id="error-order-email"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>Total Order</td>
+                                                    <td>$ <span class="amount" id="amount">1040</span></td>
+                                                    <td class="cart__item-price" data-title="Price">
+                                                        <button type="submit" name="send" class="btn btn-send">
+                                                            <i class="fa fa-paper-plane" aria-hidden="true"></i> Order Now
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3 col-md-3">
+                        <div class="widget widget__about">
+                            <img src="img/logo-bottom.svg" alt="Copyright 2018 - Сarlined.com">
+                            <p>
+                                Copyright 2018 - Сarlined.com: Order Page </p>
+                            <ul>
+                                <li><img src="img/norton.png" class="img-responsive" alt="Norton Secured"></li>
+                                <li><img src="img/McAfee.png" class="img-responsive" alt="McAfee Secure"></li>
+                                <li><img src="img/stella.png" class="img-responsive" alt="Stella Service"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-3">
+                        <div class="widget widget__menu">
+                            <div class="widget__title">
+                                About Us </div>
+                            <ul>
+                                <li><a href="https://carlined.com/contact-us">Contact us</a></li>
+                                <li><a href="https://carlined.com/privacy-policy">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <div class="widget widget__menu">
+                            <div class="widget__title">
+                                Our services </div>
+                            <ul>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-3">
+                        <div class="widget widget__newsletter newsletter-wrap subscribe-form">
+                            <div class="widget__title">
+                                News Letter </div>
+                            <p>
+                                Be the first to learn about promotions special events, new arrivals and more. </p>
+                            <p id="subscription-success" class="bg-success"></p>
+                            <form id="subscription-form" action="#" method="post">
+                                <label class="form-error form-email" id="error-subscription-email"></label>
+                                <input class="input-text" id="subscription-email" name="Subscription[email]" placeholder="YOUR EMAIL" type="email">
+                                <button class="input-button" type="submit" id="subscribe-button">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/jquery-3.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
